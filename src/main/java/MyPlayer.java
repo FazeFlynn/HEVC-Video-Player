@@ -34,7 +34,11 @@ public class MyPlayer {
         frame = new JFrame("Player");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
-        frame.setSize(800, 600);
+        frame.setSize(1024, 576);
+
+        // open at the center
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
 
         // drag-and-drop functionality
         mediaPlayerComponent = new EmbeddedMediaPlayerComponent();
@@ -84,6 +88,7 @@ public class MyPlayer {
         // Listing video files form the test dir
         File directory = new File(dir);
         String[] videoFiles = directory.list((dir, name) -> name.endsWith(".mp4") || name.endsWith(".mkv"));
+        // String[] videoFiles = directory.list((dir, name) -> true);
         
         if (videoFiles != null) {
             videoList = new JList<>(videoFiles);
@@ -114,7 +119,8 @@ public class MyPlayer {
     // validating with extensions
     private boolean isVideoFile(File file) {
         String fileName = file.getName().toLowerCase();
-        return fileName.endsWith(".mp4") || fileName.endsWith(".mkv") || fileName.endsWith(".avi");
+        // return fileName.endsWith(".mp4") || fileName.endsWith(".mkv") || fileName.endsWith(".avi");
+        return true;
     }
 
     // change audio track
