@@ -29,12 +29,13 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/FazeFlynn/HEVC-Video-Player.git
    cd HEVC-Video-Player
-
-   OR
+   ```
+   Or
 
    ```bash
    git clone https://github.com/Islam-Khan001/HEVC-Video-Player.git
    cd HEVC-Video-Player
+   ```
 
 
 
